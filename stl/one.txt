@@ -1,0 +1,21 @@
+Standard Template Library 
+
+1. Containers 
+    sequential - vectors stack queues (pair) 
+    ordered - map multimap set 
+    unordered - map set 
+
+2. Nested Containers
+    vector<vector<int>>
+    map<int , vector<int>>
+    set<pair<int , string>>
+
+3. Iterators
+    to point the memory address of Containers
+
+4. Algorithms
+    upper bound sort find next permutation prev permutatioin 
+    lower bound max min accumulate reverse count max_element find count
+    permutation 
+
+* Functors 

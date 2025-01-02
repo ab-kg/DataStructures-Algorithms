@@ -1,0 +1,2 @@
+// merge overlapping sub-intervals
+

@@ -1,0 +1,6 @@
+what is stack 
+implementing stack using arrays
+implementing using linked list
+implementing using queues /implementing using stack
+
+
