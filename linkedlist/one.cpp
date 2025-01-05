@@ -15,11 +15,10 @@ class Node{
         Node(int data1)
         {
             data = data1 ;
-            next = nullptr ;
-            
-            
+            next = nullptr ;         
         }
 };
+
 
 void PrintAll(Node* head)
 {
@@ -36,6 +35,7 @@ Node* insertHead(Node *head , int value)
     Node *temp = new Node(value , head);
     return temp ;
 }
+
 
 // deleting the last node
 Node* deleteLastNode(Node *head)
@@ -74,6 +74,7 @@ Node* deleteTail(Node* head) {
     // Return the head of the modified list
     return head;
 }
+
 
 int PrintLen(Node *head)
 {

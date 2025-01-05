@@ -12,6 +12,7 @@ int binarySearch(vector<int> &nums , int low , int high , int target)
     return 0 ;
 }
 
+
 int main()
 {
     vector<int> a = {3, 4, 6, 7, 9, 12, 16, 17};

@@ -7,7 +7,6 @@
 // LAST IN FIRST OUT --> principle of stack is helpful here 
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 class Node{
@@ -61,29 +60,25 @@ Node* reverseDLL(Node* head)
     if(head==NULL || head->next == NULL){
         return head;
     }
-
     stack<int> st ;
-
-    // Initialise the node pointer temp at head 
-    Node *temp = head ;
+    Node* temp = head;
+    
     while(temp != NULL)
     {
         st.push(temp->data);
         temp = temp->next;
     }
 
-    // Reinitailse temp to head 
-    temp = head ;
-
-    // Second iteration of the DLL to replace the values 
+    temp = head;
     while(temp != NULL)
     {
         temp->data = st.top();
         st.pop();
-        temp = temp->next ;
+        temp = temp->next;
     }
-    return head ;
+    return temp;
 }
+
 
 // Reverse Doubly Linked List without Stack
 Node *reverseDLL2(Node* head){ 

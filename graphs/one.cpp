@@ -8,9 +8,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int N = 1e3+10;
+const int N = 1e3+10 ;
 int graph1[N][N] ;
-
 
 vector<int> graph2[N];
 // with weights
@@ -31,8 +30,7 @@ int main(){
 
         // with weights
         graph2[v1].push_back({v2 , wt});
-        graph2[v2].push_back({v1 , wt})
-
+        graph2[v2].push_back({v1 , wt});
     }
 
     // Adjancency Matrix

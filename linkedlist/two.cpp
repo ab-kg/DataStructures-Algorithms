@@ -1,6 +1,5 @@
 // doubly linked list 
 // Linked lists are linear data structures consisting of nodes , each containing data and a reference to the next node .
-
 // doubly linked list has two pointers and hence the traversal is in both the direction.
 
 #include <iostream>
@@ -33,7 +32,6 @@ class Node{
         Node* next ;
         Node* back ;
 
-    
     Node(int data1 , Node* next1 , Node* back1)
     {
         data = data1;
@@ -49,33 +47,34 @@ class Node{
     }
 };
 
+Node *deleteHead(Node* head)
+{
+    if(head == NULL || head->next == NULL)
+    {
+        return NULL ;
+    }
+    Node* prev = head ;
+    head = head->next ;
+    head->back = nullptr ;
+    prev->next = nullptr ;
+    delete prev ;
+    return head ;
+}
 
-// Node *deleteHead(Node* head)
-// {
-//     if(head == NULL || head->next == NULL)
-//     {
-//         return NULL ;
-//     }
-//     Node* prev = head ;
-//     head = head->next ;
-//     head->back = nullptr ;
-//     prev->next = nullptr ;
-//     delete prev ;
-//     return head ;
-// }
 
 Node* convertArr2DLL(std::vector<int> &arr)
 {
-    Node* head = new Node(arr[0]);
-    Node* prev = head ;
-    for(int i = 1 ; i < arr.size() ; i++)
+    Node* head = Node(arr[0]);
+    Node* prev = head;
+    for(int i = 1 ;i < arr.size() ; ++i)
     {
-        Node* temp = new Node(arr[i] , nullptr , prev);
-        prev->next = temp ;
-        prev = temp ;
+        Node* temp = Node(arr[i] ,nullptr , prev) ;
+        prev->next = temp;
+        prev = temp;
     }
-    return head ;
+    return head;
 }
+
 
 void print(Node* head)
 {
@@ -159,10 +158,10 @@ Node* kthElement(Node* head , int k )
     Node *front = temp->next ;
     
     if(prev == nullptr && front == nullptr) return nullptr ;
-    else if(prev == nullptr) {  deleteHead(head); return head;}
-    else if(front == nullptr){  deleteTail(head) ; return head;}
+    else if(prev == nullptr) {  deleteHead(head); return head; }
+    else if(front == nullptr){  deleteTail(head) ; return head; }
     else {
-        prev->next = front;
+        prev->next = front ;
         front->back = prev ;
         temp->next = nullptr ;
         temp->back = nullptr ;
@@ -171,6 +170,7 @@ Node* kthElement(Node* head , int k )
     }
     return head ; 
 }
+
 
 void deleteNode(Node* temp)
 {
@@ -189,7 +189,6 @@ void deleteNode(Node* temp)
     temp->next = temp->back = nullptr ;
     free(temp);
 }
-
 
 // --------------------
 // insert at head
@@ -223,12 +222,14 @@ Node* AfterkthElementInsert(Node* head , int k , int value)
         temp = temp->next ;
     }
 
+    Node* prev = temp->back ;
+    Node* front = temp->next;
+
     Node* newnode = new Node(value , nullptr , temp);
     newnode->next = temp->next ;
     temp->next = newnode;
     return head;
 }
-
 
 Node* insertAfterTail(Node* head , int value)
 {
@@ -251,6 +252,7 @@ void insertBeforeNode(Node* node , int val)
     prev->next = newnode ;
     node->back = newnode ;
 }
+
 
 int main()
 {
