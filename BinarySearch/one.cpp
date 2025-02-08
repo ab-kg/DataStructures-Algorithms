@@ -1,22 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Montonic Arrays 
+
+// Predicate Function ( Hard Questions )
+// Ex: F F F F F T T T T , T T T F F F 
+
+// Binary Search can be applied on monotonic series 
+
+// Sorted Array ( Montonic Array )
+// Search Space in the array 
+
 int binarySearch(vector<int> &nums , int target)
 {
     int n = nums.size();
-    int low  = 0;
-    int high = n-1;
-
-    // any iterative loop can be written in the form of recursion
-    while(low <= high)
+    // defining search space 
+    int left = 0 ;
+    int right = n-1 ;
+    while(left <= right)
     {
-        int mid = (low + high)/2;
-        if(nums[mid]  == target) return mid;
-        else if (target > nums[mid]) low = mid + 1;
-        else high = mid -1;
+        int mid = left + (right - left)/2 ;
+        if(nums[mid] == target) return mid;
+        else if (nums[mid] < target) left = mid + 1;
+        else right = mid - 1;
     }
-    return -1;
 }
+
 
 // time complexity here is 
 // 2^x = n 
