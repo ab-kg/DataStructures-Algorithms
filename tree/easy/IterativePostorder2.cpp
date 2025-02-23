@@ -1,12 +1,14 @@
 // Post order
 // left Right Root 
 
-// Using one stack 
+// Using one stack  
+
 #include <iostream>
 #include <stack>
 #include <vector>
 
 using namespace std;
+
 
 struct Node 
 {
@@ -47,6 +49,16 @@ vector<int> postOrderTraversal(Node* root)
     }
     return result           ;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 // Driver Code

@@ -8,6 +8,9 @@
 
 
 #include <iostream>
+#include <vector>
+#include <stack> 
+
 using namespace std; 
 
 struct Node 
@@ -17,7 +20,6 @@ struct Node
     Node* right  ;
     Node(int val) : data(val) , left(nullptr) , right(nullptr) {}
 }; 
-
 
 vector<int> preorderTraversal(Node* root)
 {   
@@ -44,6 +46,18 @@ vector<int> preorderTraversal(Node* root)
     }
 
     return preorder ;
+}
+
+
+// Recursive way of implementing PREORDER => root - left - right 
+
+void preOrder(Node* root ,    vector<int>& arr  )
+{
+
+    if(root == nullptr)  return  ;
+    arr.push_back(root->data);
+    preOrder(root->left , arr);
+    preOrder(root->right ,arr);
 
 }
 
@@ -55,13 +69,15 @@ int main()
     root->right = new Node(3);
     root->right->right = new Node(4);
 
-    vector<int> ans  = preorderTraversal(root);
+    // vector<int> ans  = preorderTraversal(root);
+    vector<int> ans; 
+
+    preOrder(root , ans);
 
     for(auto it : ans)
     {
         cout << it << endl;
     }
-
     return 0 ;
 
 }

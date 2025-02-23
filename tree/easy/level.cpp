@@ -38,7 +38,7 @@ vector<vector<int>> levelOrder(Node* root)
     {
         vector<int> level ;
         int size = que.size();
-        for(int i =0 ;i < size ; i++)
+        for(int i = 0 ;i < size ; i++)
         {
             Node* node = que.front();
             que.pop();
@@ -56,6 +56,7 @@ vector<vector<int>> levelOrder(Node* root)
     }
     return ans;
 }
+
 
 //      1 
 //   2     6 
