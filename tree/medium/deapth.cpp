@@ -19,6 +19,7 @@ struct Node
     Node(int val) : data(val) , left(nullptr) , right(nullptr) {}
 }; 
 
+
 int maxDepth(Node* root){
     if(root == NULL) return 0 ;
 

@@ -34,17 +34,16 @@ public:
         return false;
     }
 
-
     int getHeight(Node* root)
     {
         if(root == NULL)  return 0 ;
-
         int leftHeight = getHeight(root->left);
         int rightHeight = getHeight(root->right);
         return max(leftHeight , rightHeight) + 1 ;
     }
     
 };
+
 
 int main()
 {
