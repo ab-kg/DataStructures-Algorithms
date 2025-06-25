@@ -1,6 +1,9 @@
 // Inorder
 // Left Root Right 
-
+#include <stdio.h>
+#include <iostream>
+#include <stack>
+#include <vector>
 
 struct Node 
 {
@@ -13,9 +16,10 @@ struct Node
 
 vector<int> inOrderTraversal(Node* root)
 {
-    stack<Node*> st ;
+    stack<Node* > st ;
     vector<int> inorder ;
     Node* node = root ;
+
     while(true)
     {
         if(node != NULL)
@@ -35,22 +39,36 @@ vector<int> inOrderTraversal(Node* root)
 }
 
 
+vector<int> inorderTraversal2(Node* root)
+{
+    stack<int> st ;
+    vector<int> inorder ; 
+    Node* node = root ;
 
-    // stack<Node*> st;
-    // Node* node = root;
-    // vector<int> inorder ;
-    // while(true)
-    // {
-    //     if(node != NULL) {
-    //         st.push(node);
-    //         node =  node->left ;
-    //     } else 
-    //     {
-    //         if(st.empty() == true) break;
-    //         node = st.top();
-    //         st.pop();
-    //         inorder.push_back(node->data);
-    //         node = node->right;
-    //     }
-    // }
-    // return inorder ;
+    while(true)
+    {
+        if(node != NULL)
+        {   
+            st.push(node);
+            node = node->left ;
+        }
+        else 
+        {
+            Node* required = st.top();
+            st.pop();
+            inorder.push_back(required);
+            node = node->right ;
+        }
+    }
+    return inorder ;
+}
+
+
+
+
+
+int main()
+{
+
+    return 1 ;
+}

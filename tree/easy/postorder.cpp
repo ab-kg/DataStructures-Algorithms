@@ -4,7 +4,6 @@
 #include <iostream>
 using namespace std; 
 
-
 struct Node 
 {
     int data = 5 ;
@@ -16,7 +15,6 @@ struct Node
 void postorder(Node* root)
 {
     if(root == NULL) return ;
-
     postorder(root->left);
     postorder(root->right);
     cout << root->data << endl;

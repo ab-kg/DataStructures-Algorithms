@@ -14,7 +14,6 @@ struct Node
     Node(int val) : data(val) , left(nullptr) , right(nullptr) {}
 };
 
-
 void preorder(Node* root )
 {
     if(root == NULL) return ;
@@ -24,7 +23,6 @@ void preorder(Node* root )
     preorder(root->right);
 
 }
-
 
 int main()
 {

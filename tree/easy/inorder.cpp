@@ -4,7 +4,6 @@
 #include <iostream>
 using namespace std; 
 
-
 struct Node 
 {
     int data = 5 ;
@@ -16,7 +15,6 @@ struct Node
 void inorder(Node* root)
 {
     if(root == NULL) return ;
-
     inorder(root->left);
     cout << root->data << endl;
     inorder(root->right);
@@ -31,8 +29,3 @@ int main()
     one->right = new Node(6);
     inorder(one);
 }
-
-
-//      1 
-//   2     6 
-// 4   3  

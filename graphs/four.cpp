@@ -10,6 +10,60 @@ vector<vector<int>> cc;
 vector<int> current_cc ;
 
 
+// DFS in modern C++ class solution
+
+class Solution{
+	private:
+		void dfs(int node , vector<int> adj[] , int vis[] , vector<int>& ls){
+			vis[node] = 1;
+			ls.push_back(node);
+
+			for(auto it : adj[node]){
+				if(!vis[it]){
+					dfs(it , adj , vis , ls );
+				}
+			}
+		}
+
+	public:
+		vector<int> dfsOfGraph(int n , vector<int> adj[]){
+
+			int vis[n] = {0} ;
+			int start = 0 ;
+			vector<int> ls ;
+			dfs(start , adj , vis , ls);
+			return ls ;
+
+		}
+}
+
+//  SC = O(N) + O(N) + O(N) = O(3N)
+//  TC = O(N) + O(2*E) -- undirected graph
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 void dfs(int vertex)
 {
 	// do things to vertex after entering vertex
@@ -31,7 +85,7 @@ int main()
 	int n , e ;
 	cin >> n >> e ;
 
-	for(int i =0 ;i < e ; ++i)
+	for(int i = 0 ;i < e ; ++i)
 	{
 		int x , y ;
 		cin >> x >> y ;
