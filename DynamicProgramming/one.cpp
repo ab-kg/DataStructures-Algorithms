@@ -20,6 +20,9 @@ int fib(int  n ){
 // Using Dynamic Programming to Optimise the Recursive Fibonacci Solution
 
 // Top Down Approach 
+// Memoisation
+// TC -> 
+// SC ->
 int fibonacci(int  n ){
     if(n == 0) return 0 ;
     if(n == 1) return 1;
@@ -29,6 +32,10 @@ int fibonacci(int  n ){
 }
 
 // Bottom Up Approach
+// Tabulation 
+// SC ->  O(N)
+// TC ->  O(N)
+
 int main(){
     memset(dp , -1 , sizeof(dp));
     int n ;
@@ -40,6 +47,27 @@ int main(){
     }
     return dp[n];
 }
+
+ 
+// Optimize the code 
+int main()
+{
+    memset(dp , -1 , sizeof(dp));
+    int n ; 
+    cin >> n ;
+    prev2 = 0 ; 
+    prev  =1 ;
+    for(int i = 2 ; i <=n ; i++)
+    {
+        int curr = prev + prev2 ; 
+        prev2 = prev  ; 
+        prev = curr ; 
+    }
+    cout << prev ; 
+    return 0 ;
+}
+
+
 
 int main1(){
     memset(dp , -1 , sizeof(dp));

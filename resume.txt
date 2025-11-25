@@ -1,0 +1,94 @@
+      \resumeProjectHeading
+          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
+            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
+            \resumeItem{Visualized GitHub data to show collaboration}
+            \resumeItem{Used Celery and Redis for asynchronous tasks}
+          \resumeItemListEnd
+
+
+            \resumeProjectHeading
+          {\textbf{Hazel Engine} $|$ \emph{ C++ , C## , OpenGL , Premake  }}{ January 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Built a custom C++ game engine from scratch with an OpenGL-based renderer, ImGui editor UI}
+            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
+            \resumeItem{ Project Setup , premake for build configuration , spdlog for loggin system  }
+            \resumeItem{ Rendering System using OpenGL apis .  }
+            \resumeItem{ Input and Events System using GLFW library .   }
+            \resumeItem{ Profiling & Instrumentation ; measures CPU timings for functions allows realtime performance visualization . }
+            \resumeItem{ Implemented a scene and entity system using the EnTT-based ECS architecture .  }
+          \resumeItemListEnd
+
+
+
+// After completing game engine update this . 
+
+            \resumeProjectHeading
+          {\textbf{Hazel Engine} $|$ \emph{ C++ , C## , OpenGL , Premake  }}{ January 2025 -- Present}
+          \resumeItemListStart
+\resumeItem{Built a custom C++ game engine from scratch with an OpenGL-based renderer, ImGui editor UI, and a C# scripting runtime using Mono}
+            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
+            \resumeItem{Visualized  }
+            \resumeItem{Used Celery and Redis for asynchronous tasks}
+          \resumeItemListEnd
+
+
+
+
+
+
+
+      \resumeProjectHeading
+          {\textbf{Medium (Bloggin Application )} $|$ \emph{ React ,  CloudFlare workers , TypeScript , Prisma ORM  , Postgress , JWT (auth ) }}{April 2024 -- June 2024 }
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack web application using with CloudFlare workers with React as the frontend}
+            \resumeItem{ Published a medium like application where you can upload the blog and read blogs . }
+            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release }
+            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+          \resumeItemListEnd
+
+
+
+
+
+
+
+ 
+1. C/C++ , Typescrip / Javascript   ,   Python , Javascript , HTML/CSS 
+2. Frameworks & Libraries : ImGui  , glm , spdlog , 
+
+
+
+
+
+Getting Started
+Visual Studio 2017 or 2019 is recommended, Hazel is officially untested on other development environments whilst we focus on a Windows build.
+
+1. Downloading the repository:
+
+Start by cloning the repository with git clone --recursive https://github.com/TheCherno/Hazel.
+
+If the repository was cloned non-recursively previously, use git submodule update --init to clone the necessary submodules.
+
+2. Configuring the dependencies:
+
+Run the Setup.bat file found in scripts folder. This will download the required prerequisites for the project if they are not present yet.
+One prerequisite is the Vulkan SDK. If it is not installed, the script will execute the VulkanSDK.exe file, and will prompt the user to install the SDK.
+After installation, run the Setup.bat file again. If the Vulkan SDK is installed properly, it will then download the Vulkan SDK Debug libraries. (This may take a longer amount of time)
+After downloading and unzipping the files, the Win-GenProjects.bat script file will get executed automatically, which will then generate a Visual Studio solution file for user's usage.
+If changes are made, or if you want to regenerate project files, rerun the Win-GenProjects.bat script file found in scripts folder.
+
+
+
+
+\resumeProjectHeading
+  {\textbf{Medium‑clone Backend API} $|$ \emph{Node.js, Express, Prisma ORM, TypeScript, }}{Month YYYY – Month YYYY}
+  \resumeItemListStart
+    \resumeItem{Designed and implemented a REST‑style backend API to support Medium‑style blogging (CRUD for users, articles, comments, and authentication)}
+    \resumeItem{Used Prisma ORM with PostgreSQL (or MongoDB, depending on tech stack) to model database schemas and relationships}
+    \resumeItem{Secured endpoints with JWT authentication and role‑based access control}
+    \resumeItem{Wrote unit and integration tests using Jest (or similar), ensuring > 90% coverage}
+    \resumeItem{Set up CI/CD pipeline (GitHub Actions or TravisCI) to run tests and deploy backend on each commit/pull request}
+    \resumeItem{Collaborated with frontend developers to define API contracts and iterate on improvements}
+  \resumeItemListEnd
